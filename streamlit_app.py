@@ -65,7 +65,7 @@ def display_orders():
 
 def main():
     st.title("Online FoodKart Delivery System")
-    st.write("Shaurya Juneja")
+    st.write("Made by Shaurya Juneja - 23CS028")
     menu_choice = st.sidebar.radio("Navigate", ["Menu", "Place an Order", "Total Revenue", "Unique Customers", "All Orders"])
     
     if menu_choice == "Menu":
