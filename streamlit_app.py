@@ -72,12 +72,12 @@ def main():
         display_menu()
     elif menu_choice == "Place an Order":
         place_order()
-    elif menu_choice == "Total Revenue":
+    elif menu_choice == "See Total Revenue":
         display_total_revenue()
-    elif menu_choice == "Unique Customers":
+    elif menu_choice == "See Unique Customers":
         display_unique_customers()
-    elif menu_choice == "All Orders":
+    elif menu_choice == "See All Orders":
         display_orders()
 
-if __name__ == "__main__":
-    main()
+
+main()
