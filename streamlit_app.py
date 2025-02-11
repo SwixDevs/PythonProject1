@@ -40,8 +40,8 @@ def place_order():
 
 #Display total revenue
 def display_total_revenue():
-    total_revenue = sum(order[3] for order in st.session_state.orders)
     st.subheader("Total Revenue Generated")
+    total_revenue = sum(order[3] for order in st.session_state.orders)
     st.write(f"Rs. {total_revenue}")
 
 #Display all customers (no repetition because of set)
