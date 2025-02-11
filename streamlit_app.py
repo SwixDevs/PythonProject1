@@ -1,6 +1,6 @@
 import streamlit as st
 
-# Menu dictionary
+#Menu dictionary
 menu = {
     "Burger": (150, "Fast Food"),
     "Pizza": (300, "Fast Food"),
@@ -9,19 +9,19 @@ menu = {
     "Salad": (120, "Healthy"),
 }
 
-# Session state initialization
+#Session state
 if "orders" not in st.session_state:
     st.session_state.orders = []
 if "unique_customers" not in st.session_state:
     st.session_state.unique_customers = set()
 
-# Display menu function
+#Display all menu items
 def display_menu():
     st.subheader("Menu")
     for item, (price, category) in menu.items():
         st.write(f"**{item}**: Rs. {price} ({category})")
 
-# Place an order function
+#Place order
 def place_order():
     st.subheader("Place an Order")
     customer_name = st.text_input("Enter your name")
@@ -38,13 +38,13 @@ def place_order():
         else:
             st.warning("Please enter your name and select at least one item.")
 
-# Display total revenue function
+#Display total revenue
 def display_total_revenue():
     total_revenue = sum(order[3] for order in st.session_state.orders)
     st.subheader("Total Revenue Generated")
     st.write(f"Rs. {total_revenue}")
 
-# Display unique customers function
+#Display all customers (no repetition because of set)
 def display_unique_customers():
     st.subheader("Unique Customers")
     if st.session_state.unique_customers:
@@ -53,7 +53,7 @@ def display_unique_customers():
     else:
         st.write("No customers yet.")
 
-# Display all orders function
+#Display all orders
 def display_orders():
     st.subheader("All Orders")
     if st.session_state.orders:
@@ -62,9 +62,10 @@ def display_orders():
     else:
         st.write("No orders placed yet.")
 
-# Main Streamlit app
+
 def main():
-    st.title("Online Food Delivery System")
+    st.title("Online FoodKart Delivery System")
+    st.write("Shaurya Juneja")
     menu_choice = st.sidebar.radio("Navigate", ["Menu", "Place an Order", "Total Revenue", "Unique Customers", "All Orders"])
     
     if menu_choice == "Menu":
