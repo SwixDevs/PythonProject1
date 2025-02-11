@@ -66,17 +66,17 @@ def display_orders():
 def main():
     st.title("Online FoodKart Delivery System")
     st.write("Made by Shaurya Juneja - 23CS028")
-    menu_choice = st.sidebar.radio("Navigate", ["Menu", "Place an Order", "Total Revenue", "Unique Customers", "All Orders"])
+    menu_choice = st.sidebar.radio("Navigate", ["Menu", "Place an Order", "See Total Revenue", "See Unique Customers", "See All Orders"])
     
     if menu_choice == "Menu":
         display_menu()
     elif menu_choice == "Place an Order":
         place_order()
-    elif menu_choice == "Total Revenue":
+    elif menu_choice == "See Total Revenue":
         display_total_revenue()
-    elif menu_choice == "Unique Customers":
+    elif menu_choice == "See Unique Customers":
         display_unique_customers()
-    elif menu_choice == "All Orders":
+    elif menu_choice == "See All Orders":
         display_orders()
 
 if __name__ == "__main__":
