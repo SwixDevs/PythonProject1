@@ -79,5 +79,5 @@ def main():
     elif menu_choice == "See All Orders":
         display_orders()
 
-
-main()
+if __name__ == "__main__":
+    main()
